@@ -5,7 +5,7 @@ import {
   PageRow,
   SidePageRowItem,
   RotateIcon,
-} from "@/assets/styles/commonStyled";
+} from "@/assets/styles/CommonStyled";
 import { SmallArrowIcon } from "@/components/common/CommonIcons";
 import { analysisStore } from "@/store";
 
@@ -22,7 +22,8 @@ const SidePageTab = ({ item, sectionIndex, sectionHandler, pageHandler }) => {
       <SectionItem
         $sectionIndex={sectionIndex}
         className="border"
-        onClick={() => sectionHandler?.({ sectionIndex })}>
+        onClick={() => sectionHandler?.({ sectionIndex })}
+      >
         <div className="item">
           <RotateIcon $rotate={!display} onClick={() => setDisplay(!display)}>
             <SmallArrowIcon />
@@ -39,7 +40,8 @@ const SidePageTab = ({ item, sectionIndex, sectionHandler, pageHandler }) => {
               selectedSection === sectionIndex &&
               selectedPage === pageIndex &&
               "selected"
-            }`}>
+            }`}
+          >
             <div className="item">
               <FileIcon />
               <span>{page?.pageName}</span>
